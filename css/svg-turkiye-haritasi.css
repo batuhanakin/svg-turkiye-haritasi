@@ -1,4 +1,8 @@
 /*! SVG Türkiye Haritası | CSS | MIT Lisans | dnomak.com */
+#gdg path:hover{
+  background: red;
+
+}
 
 .svg-turkiye-haritasi {
   max-width: 1140px;
@@ -13,23 +17,37 @@
   position: absolute;
   z-index: 2;
 }
+.imge{
+  position: absolute;
+  z-index: 2;
+}
+.imge img{
+  display: inline-block;
+}
 .il-isimleri div {
   font-family: 'Open Sans';
   display: inline-block;
-  background: #1094F6;
+  background: rgb(183, 71, 235);
   color: #fff;
-  padding: 8px 16px;
+  padding: 8px 20px;
+  padding-left: 60px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
 #svg-turkiye-haritasi path {
   cursor: pointer;
-  fill: #222;
+  /* fill: #222; */
 }
-#svg-turkiye-haritasi path:hover {
+.gdg path{
+  fill: #f1ac00;
+}
+.gdg path:hover{
+  fill: red;
+}
+/* #svg-turkiye-haritasi path:hover {
   fill: #1094F6;
-}
+} */
 #guney-kibris {
   pointer-events: none;
 }

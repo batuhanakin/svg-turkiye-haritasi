@@ -1,6 +1,7 @@
 /*! SVG Türkiye Haritası | MIT Lisans | dnomak.com */
 
 function svgturkiyeharitasi() {
+  const gdg ={"adana":"GDG-Adana","ankara":"GDGAnkara","antalya":"GDGAntalya","bolu":"GDGBolu","burdur":"gdgburdur","bursa":"GDGBursa","denizli":"GDGDenizli","edirne":"GDGEdirne","eskisehir":"gdgeskisehir","hatay":"gdghatay","isparta":"GdgIsparta","mersin":"GDG-Mersin","istanbul":"GDGIstanbul","izmir":"GDG-Izmir","kayseri":"GDG-Kayseri","kocaeli":"GDGKocaeli","konya":"GDGKonya","kutahya":"GDG-Kutahya", "manisa":"GDG-Manisa", "samsun":"GDG-Samsun", "tekirdag":"gdgtekirdag", "trabzon":"GDGTrabzon", "sivas":"meetup-group-KQsayXeh", "sanliurfa":"GDG-Sanliurfa", "duzce":"GDG-Duzce-Meetup" }
   const element = document.querySelector('#svg-turkiye-haritasi');
   const info = document.querySelector('.il-isimleri');
   const imge = document.querySelector('.imge');
@@ -40,15 +41,13 @@ function svgturkiyeharitasi() {
     'click',
     function (event) {
       if (event.target.tagName === 'path' && event.target.parentNode.className.baseVal === 'gdg') {
+        const parent = event.target.parentNode;
         const id = parent.getAttribute('id');
         
-        if (id === 'guney-kibris' ) {
-          return;
-        }
+        console.log(gdg[id])
         window.location.href = (
-          'https://www.google.com/search?q=gdg+'
-          + id
-          + ' meetup'
+          'https://www.meetup.com/'
+          + gdg[id]
         );
       }
     }

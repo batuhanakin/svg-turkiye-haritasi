@@ -21,8 +21,8 @@ function svgturkiyeharitasi() {
   element.addEventListener(
     'mousemove',
     function (event) {
-      imge.style.top = event.pageY + 32 + 'px';
-      imge.style.left = event.pageX  + 'px';
+      imge.style.top = event.pageY + 15 + 'px';
+      imge.style.left = event.pageX + 10 + 'px';
       info.style.top = event.pageY + 25 + 'px';
       info.style.left = event.pageX +20+ 'px';
     }
@@ -40,9 +40,8 @@ function svgturkiyeharitasi() {
     'click',
     function (event) {
       if (event.target.tagName === 'path' && event.target.parentNode.className.baseVal === 'gdg') {
-        const parent = event.target.parentNode;
         const id = parent.getAttribute('id');
-
+        
         if (id === 'guney-kibris' ) {
           return;
         }
